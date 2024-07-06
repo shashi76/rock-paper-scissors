@@ -5,11 +5,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.mcnz.rps.web</groupId>
-  <artifactId>roshambo</artifactId>
+  <artifactId>rock-paper-scissors</artifactId>
   <version>1.0</version>
   <packaging>war</packaging>
 
-  <name>roshambo web application</name>
+  <name>rock-paper-scissors web application</name>
   <url>http://www.mcnz.com</url>
 
   <properties>
