@@ -16,7 +16,7 @@ pipeline {
 
 		stage ('gitclone') {
 		steps {
-		sh "git clone https://github.com/kshiteez/rock-paper-scissors.git"
+		sh "git clone https://github.com/shashi76/rock-paper-scissors.git"
 		}	 
                 }
 					
