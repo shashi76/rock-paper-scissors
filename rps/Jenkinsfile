@@ -31,7 +31,7 @@ pipeline {
 					
 				stage ('deployment') {
 		        steps {
-		        sh "cp -r /root/rps/rock-paper-scissors/target/rock-paper-scissors.war /root/apache-tomcat-9.0.89/webapps/"
+		        sh "cp -r /root/rps/rock-paper-scissors/target/rock-paper-scissors.war /root/apache-tomcat-9.0.94/webapps/"
 				}
                       }
 				
