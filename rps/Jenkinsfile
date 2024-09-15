@@ -31,23 +31,23 @@ pipeline {
 
 	      stage ('tomcat stop') {
 		steps {
-		  dir ("/root/apache-tomcat-9.0.89/bin/") {
+		  dir ("/root/apache-tomcat-9.0.94/bin/") {
 		    sh 'sh shutdown.sh'
+	            sh 'rm -rf /root/apache-tomcat-9.0.94/webapps/rock-paper-scissors.war'		  
 		}	 
                 }
          	}
 					
                stage ('deployment') {
-                 steps {
-                   sh 'rm -rf /root/apache-tomcat-9.0.89/webapps/rock-paper-scissors.war'	
-                   sh "cp -r /root/rps/rock-paper-scissors/target/rock-paper-scissors.war /root/apache-tomcat-9.0.89/webapps/"
+                 steps {	
+                   sh "cp -r /root/rps/rock-paper-scissors/target/rock-paper-scissors.war /root/apache-tomcat-9.0.94/webapps/"
                     }
                     }
 				
 	        stage ('start tomcat server') {
 		  steps {
 	          keepRunning {	
-	          dir ("/root/apache-tomcat-9.0.89/bin/") {	
+	          dir ("/root/apache-tomcat-9.0.94/bin/") {	
                     sh 'sh startup.sh'
 		  }
                   }
