@@ -38,7 +38,7 @@ pipeline {
 				stage ('start tomcat server') {
 		        steps {
 				keepRunning {	
-				dir ("/root/apache-tomcat-9.0.89/bin/") {
+				dir ("/root/apache-tomcat-9.0.94/bin/") {
                                 sh 'sh startup.sh'
 				}
                                 }
